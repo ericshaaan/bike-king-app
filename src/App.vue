@@ -1,17 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- nav bar here -->
+    <webHeader class = "sticky-top" />
+
+    <!-- router-view here -->
+    <router-view />
+    <!-- end router-view -->
+
+    <!-- footer here -->
+    <webFooter />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/shared/header.vue'
+import Footer from './components/shared/footer.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    webHeader: Header,
+    webFooter: Footer,
   }
 }
 </script>
@@ -23,6 +32,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 </style>
